@@ -1,0 +1,104 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def store(products,week1,week2,week3,week4):
+    totalElectronics = 0
+    totalGroceries = 0
+    totalClothing = 0
+    totalFurniture = 0
+    totalStationery =  0
+    
+    totalElectronics = week1[0]+week2[0]+week3[0]+week4[0]
+    totalGroceries = week1[1]+week2[1]+week3[1]+week4[1]
+    totalClothing = week1[2]+week2[2]+week3[2]+week4[2]
+    totalFurniture = week1[3]+week2[3]+week3[3]+week4[3]
+    totalStationery = week1[4]+week2[4]+week3[4]+week4[4]
+    
+    print("Total Electronics sold: ",totalElectronics)
+    print("Total Groceries sold: ",totalGroceries)
+    print("Total Clothing sold: ",totalClothing)
+    print("Total Furniture sold: ",totalFurniture)
+    print("Total Stationery sold: ",totalStationery)
+    print("\n")
+    
+    
+products = np.array(['Electronics', 'Groceries', 'Clothing', 'Furniture', 'Stationery'])
+week1 = np.array([120, 500, 230, 75, 45])
+week2 = np.array([130, 520, 210, 80, 40])
+week3 = np.array([125, 530, 220, 70, 50])
+week4 = np.array([140, 540, 200, 90, 60])
+
+# store(products,week1,week2,week3,week4)
+
+def total_and_averageSales(products,week1,week2,week3,week4):
+    totalElectronics = 0
+    totalGroceries = 0
+    totalClothing = 0
+    totalFurniture = 0
+    totalStationery =  0
+    
+    totalElectronics = week1[0]+week2[0]+week3[0]+week4[0]
+    totalGroceries = week1[1]+week2[1]+week3[1]+week4[1]
+    totalClothing = week1[2]+week2[2]+week3[2]+week4[2]
+    totalFurniture = week1[3]+week2[3]+week3[3]+week4[3]
+    totalStationery = week1[4]+week2[4]+week3[4]+week4[4]
+    
+    avgElectronics = totalElectronics/4
+    avgGroceries = totalGroceries/4
+    avgClothing = totalClothing/4
+    avgFurniture = totalFurniture/4
+    avgStationery = totalStationery/4
+    
+    total_week1 = week1[0]+week1[1]+week1[2]+week1[3]+week1[4]
+    total_week2 = week2[0]+week2[1]+week2[2]+week2[3]+week2[4]
+    total_week3 = week3[0]+week3[1]+week3[2]+week3[3]+week3[4]
+    total_week4 = week4[0]+week4[1]+week4[2]+week4[3]+week4[4]
+    
+    print("Total sale in week 1: ",total_week1)
+    print("Total sale in week 2: ",total_week2)
+    print("Total sale in week 3: ",total_week3)
+    print("Total sale in week 4: ",total_week4)
+    print("\n")
+    
+    print("Average Electronics sold: ",avgElectronics)
+    print("Average Groceries sold: ",avgGroceries)
+    print("Average Clothing sold: ",avgClothing)
+    print("Average Furniture sold: ",avgFurniture)
+    print("Average Stationery sold: ",avgStationery)
+    print("\n")
+    
+def best_and_worst(products,week1,week2,week3,week4):
+    totalElectronics = 0
+    totalGroceries = 0
+    totalClothing = 0
+    totalFurniture = 0
+    totalStationery =  0
+    
+    totalElectronics = week1[0]+week2[0]+week3[0]+week4[0]
+    totalGroceries = week1[1]+week2[1]+week3[1]+week4[1]
+    totalClothing = week1[2]+week2[2]+week3[2]+week4[2]
+    totalFurniture = week1[3]+week2[3]+week3[3]+week4[3]
+    totalStationery = week1[4]+week2[4]+week3[4]+week4[4]
+    
+    best_selling = max(totalElectronics,totalGroceries,totalClothing,totalFurniture,totalStationery)
+    worst_selling = min(totalElectronics,totalGroceries,totalClothing,totalFurniture,totalStationery)
+    
+    print("Best selling = ", best_selling)
+    print("Worst selling = ", worst_selling)
+    
+    dictionary = {totalElectronics: "Electronics",
+                  totalGroceries: "Groceries",
+                  totalClothing:"Clothing",
+                  totalFurnture:"Furniture",
+                  totalStationery:"Stationery"}
+    print(dictionary[])
+    
+                   
+                   
+                   
+store(products,week1,week2,week3,week4)    
+total_and_averageSales(products,week1,week2,week3,week4)
+best_and_worst(products,week1,week2,week3,week4)
+
+plt.bar(products)
+plt.show()
